@@ -1,6 +1,6 @@
 ## Distributionally Robust Post-hoc Classifiers under Prior Shifts [ICLR 2023]
 
-This repository is the official Pytorch implementation of [[Distributionally Robust Post-hoc Classifiers under Prior Shifts]](https://openreview.net/forum?id=3KUfbI9_DQE)) accepted by ICLR 2023.
+This repository is the official Tensorflow implementation of [[Distributionally Robust Post-hoc Classifiers under Prior Shifts]](https://openreview.net/forum?id=3KUfbI9_DQE)) accepted by ICLR 2023.
 
 <b>Title</b>: <i>Distributionally Robust Post-hoc Classifiers under Prior Shifts</i> <a href="https://openreview.net/forum?id=3KUfbI9_DQE">[pdf]</a>\
 <b>Authors</b>:Jiaheng Wei, Harikrishna Narasimhan, Ehsan Amid, Wensheng Chu, Yang Liu, Abhishek Kumar\
