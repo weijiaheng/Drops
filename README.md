@@ -7,6 +7,30 @@ This repository is the official Tensorflow implementation of [[Distributionally 
 <b>Institute</b>: University of California, Santa Cruz \& Google Research\
 <b>One sentence summary</b>: We propose a method for scaling the model predictions at test-time for improved distribution robustness to prior shifts.
 
+**Experimental code for DROPS projects on class-imbalanced learning tasks**
+
+**Example Usage**
+
+(1) Two-step vatriant for training DROPS
+
+Step 1: run synthetic long-tailed cifar experiments with ce loss to get the base model
+
+```
+python main_lt.py --dataset 'cifar10' --loss 'ce' --imb_ratio 0.1 --dro_div 'kl'
+```
+
+Step 2: perform Distribution RObust PoSthoc on saved model prediction logits obtained from the pre-trained model
+```
+python drops_test_time.py --dataset 'cifar10' --loss 'drops' --imb_ratio 0.1 --eta_lambda 10 --num_iters 25 --eta_lambda_mult 0.95 --prior_type 'train' --cal_type 'none' --eps 0.9
+```
+
+(2) One-step vatriant for training DROPS
+
+To run synthetic long-tailed cifar experiments with ce loss, run
+
+```
+python main_lt.py --dataset 'cifar10' --loss 'drops' --imb_ratio 0.1 --dro_div 'kl'
+```
 
 <b>Motivation 1:</b>\
 How a method performs well under a generic evaluation metric:
